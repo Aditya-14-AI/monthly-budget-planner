@@ -49,7 +49,7 @@ export function SetBudgetModal({ triggerLabel = "Set Budget" }: SetBudgetModalPr
               type="number"
               min="0"
               step="0.01"
-              placeholder="5000"
+              placeholder=" "
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               required
