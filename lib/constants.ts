@@ -1,3 +1,5 @@
+export const MONTHLY_BUDGET = 5000;
+
 export const CATEGORY_COLORS: Record<string, string> = {
   food: "#0ea5e9",
   transport: "#22c55e",

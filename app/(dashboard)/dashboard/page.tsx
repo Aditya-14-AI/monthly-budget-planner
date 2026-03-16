@@ -1,6 +1,5 @@
 import { AddExpenseModal } from "@/components/dashboard/add-expense-modal";
 import { ExpenseCharts } from "@/components/dashboard/charts";
-import { SetBudgetModal } from "@/components/dashboard/set-budget-modal";
 import { SummaryCards } from "@/components/dashboard/summary-cards";
 import { TransactionTable } from "@/components/dashboard/transaction-table";
 
@@ -12,10 +11,7 @@ export default function DashboardPage() {
           <h2 className="text-2xl font-bold tracking-tight">Dashboard</h2>
           <p className="text-muted-foreground">Track your expenses and stay on budget.</p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <SetBudgetModal triggerLabel="Set Budget" />
-          <AddExpenseModal />
-        </div>
+        <AddExpenseModal />
       </div>
       <SummaryCards />
       <ExpenseCharts />
