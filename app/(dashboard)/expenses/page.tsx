@@ -1,5 +1,4 @@
 import { AddExpenseModal } from "@/components/dashboard/add-expense-modal";
-import { SetBudgetModal } from "@/components/dashboard/set-budget-modal";
 import { TransactionTable } from "@/components/dashboard/transaction-table";
 
 export default function ExpensesPage() {
@@ -10,10 +9,7 @@ export default function ExpensesPage() {
           <h2 className="text-2xl font-bold tracking-tight">Expenses</h2>
           <p className="text-muted-foreground">Manage all transactions and keep records tidy.</p>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <SetBudgetModal triggerLabel="Set Budget" />
-          <AddExpenseModal />
-        </div>
+        <AddExpenseModal />
       </div>
       <TransactionTable />
     </div>

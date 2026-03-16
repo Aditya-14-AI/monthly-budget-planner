@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
@@ -16,13 +16,7 @@ export function SetBudgetModal({ triggerLabel = "Set Budget" }: SetBudgetModalPr
   const monthlyBudget = useExpenseStore((state) => state.monthlyBudget);
   const setMonthlyBudget = useExpenseStore((state) => state.setMonthlyBudget);
   const [open, setOpen] = useState(false);
-  const [amount, setAmount] = useState("");
-
-  useEffect(() => {
-    if (open) {
-      setAmount(monthlyBudget > 0 ? monthlyBudget.toString() : "");
-    }
-  }, [monthlyBudget, open]);
+  const [amount, setAmount] = useState(monthlyBudget ? monthlyBudget.toString() : "");
 
   function submitBudget(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -55,7 +49,7 @@ export function SetBudgetModal({ triggerLabel = "Set Budget" }: SetBudgetModalPr
               type="number"
               min="0"
               step="0.01"
-              placeholder="10000"
+              placeholder=" "
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               required
